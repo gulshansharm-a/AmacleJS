@@ -1,0 +1,77 @@
+#backGroundImage{
+    width: 100%;
+    position: relative;
+    max-height: 100vh;
+}
+#container{
+    position: relative;
+}
+#LoginMen{
+    position: absolute;
+    width: auto;
+    top: 10%;
+    right: 10%;
+    height: 90vh;
+}
+#formContainer{
+    position: absolute;
+    top: 15%;
+    left: 8%;
+}
+#LoginText{
+margin-left: 10px;
+color: #0B66A0;
+}
+#WelcomText{
+    color: #000000;
+}
+#Welcomback{
+    display: flex;
+}
+#dis{
+    width: 60vb;
+    display: flex;
+}
+.inputField{
+    margin-top: 20px;
+    width: 50vb;
+    height: 4.5vh;
+    border-radius: 7px;
+    border-color: #000000;
+}
+
+.inputFieldButton{
+    margin-top: 20px;
+    width: 50vb;
+    height: 4.5vh;
+    border-radius: 50px;
+    border-color: #000000;
+    background-color: #0B66A0;
+    color: white;
+
+}
+
+.inputFieldButton:hover{
+    border-color: #e3e0e0;
+    background-color: #e3e0e0;
+    color: #0B66A0;
+    
+}
+@media (max-width: 768px) {
+    #LoginMen{
+        visibility: hidden;
+    }
+    #formContainer{
+        position: absolute;
+        top: 15%;
+        left: 8%;
+
+    }
+    #backGroundImage{
+        width: 100%;
+        position: relative;
+        height:120vh;
+        
+    }
+    
+}

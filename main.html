@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+
+        .editor-container {
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .toolbar {
+            margin-bottom: 10px;
+        }
+
+        button {
+            padding: 5px 10px;
+            margin-right: 5px;
+        }
+
+        .editor {
+            border: 1px solid #ccc;
+            padding: 10px;
+            min-height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div class="editor-container">
+        <div class="toolbar">
+            <button onclick="formatText('bold')">Bold</button>
+            <button onclick="formatText('italic')">Italic</button>
+            <button onclick="formatText('underline')">Underline</button>
+            <button onclick="formatText('insertOrderedList')">Ordered List</button>
+            <button onclick="formatText('insertUnorderedList')">Unordered List</button>
+            <button onclick="createLink()">Add Link</button>
+        </div>
+        <div class="editor" contenteditable="true" id="editor" oninput="updateHTMLContent()"></div>
+        <p id="innercontent"></p>
+    </div>
+    <script>
+        function formatText(command, value = null) {
+            document.execCommand(command, false, value);
+        }
+
+        function createLink() {
+            var url = prompt("Enter the URL:");
+            if (url) {
+                document.execCommand('createLink', false, url);
+            }
+        }
+
+        function updateHTMLContent() {
+            var editorContent = document.getElementById('editor').innerHTML;
+            document.getElementById("innercontent").innerHTML = editorContent;
+        }
+    </script>
+</body>
+</html>
