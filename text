@@ -1,0 +1,158 @@
+
+
+to create Migration use 
+npm run  amacle create:migration User
+your migration will be create at src\Amacle\Migrations\UserMigration.js
+  initialize() {
+        // Create a new table in the database using a Blueprint
+        DB.create((table = new Blueprint()) => {
+            // Define the structure of the 'User' table
+            table.name("User");
+            table.id("id");
+            // Write your code here
+            table.timestamps("created_at")
+            // Execute the SQL query to create the table
+            table.create();
+        });
+    }
+
+you have to write your code here 
+
+ initialize(){} this block will run when you are going to migrate yoru code to the database
+
+    action() { 
+        // You can add specific actions or modifications here
+    }
+here you can specify other functions liek droping table creating index and other
+
+
+following are the features which you can use to define the properties of the tabel col
+
+Certainly! Below is a list of data types present in the `Blueprint` class along with a brief description of each and the properties or options associated with them:
+
+1. **BIGINT**: Represents a large integer data type.
+   - Properties: `UNSIGNED`, `AUTO_INCREMENT`
+
+2. **BLOB**: Represents a binary large object data type.
+   
+3. **BOOLEAN**: Represents a boolean data type.
+
+4. **CHAR**: Represents a fixed-length character string data type.
+   - Property: `length`
+
+5. **DATETIME**: Represents a date and time data type.
+
+6. **DECIMAL**: Represents a fixed-point decimal number data type.
+   - Properties: `precision`, `scale`, `UNSIGNED`
+
+7. **DOUBLE**: Represents a double-precision floating-point number data type.
+   - Properties: `precision`, `scale`, `UNSIGNED`
+
+8. **ENUM**: Represents an enumeration data type with a predefined set of values.
+   - Property: `values`
+
+9. **FLOAT**: Represents a floating-point number data type.
+
+10. **GEOMETRY**: Represents a geometry data type.
+
+11. **INT**: Represents an integer data type.
+    - Properties: `UNSIGNED`, `AUTO_INCREMENT`
+
+12. **JSON**: Represents a JSON data type.
+
+13. **LINESTRING**: Represents a linestring geometry data type.
+
+14. **MEDIUMINT**: Represents a medium-sized integer data type.
+    - Properties: `UNSIGNED`, `AUTO_INCREMENT`
+
+15. **MEDIUMTEXT**: Represents a medium-sized text data type.
+
+16. **MULTILINESTRING**: Represents a multiline string geometry data type.
+
+17. **MULTIPOINT**: Represents a multipoint geometry data type.
+
+18. **MULTIPOLYGON**: Represents a multipolygon geometry data type.
+
+19. **POINT**: Represents a point geometry data type.
+
+20. **POLYGON**: Represents a polygon geometry data type.
+
+21. **SET**: Represents a set data type with a predefined set of values.
+    - Property: `values`
+
+22. **SMALLINT**: Represents a small integer data type.
+    - Properties: `UNSIGNED`, `AUTO_INCREMENT`
+
+23. **TEXT**: Represents a text data type.
+
+24. **TIME**: Represents a time data type.
+
+25. **TIMESTAMP**: Represents a timestamp data type.
+    - Property: `DEFAULT CURRENT_TIMESTAMP`
+
+26. **TINYINT**: Represents a tiny integer data type.
+    - Properties: `UNSIGNED`, `AUTO_INCREMENT`
+
+27. **TINYTEXT**: Represents a tiny text data type.
+
+28. **VARCHAR**: Represents a variable-length character string data type.
+    - Property: `length`
+
+29. **YEAR**: Represents a year data type.
+Certainly! Here are the options that can be added to the data types in the `Blueprint` class along with a brief description of each:
+
+1. **UNSIGNED**: Specifies that the numeric data type cannot store negative values.
+   
+2. **AUTO_INCREMENT**: Specifies that the numeric data type should automatically increment its value for each new row inserted.
+
+3. **length**: Specifies the length of character data types such as `CHAR` and `VARCHAR`.
+
+4. **precision**: Specifies the precision (total number of digits) for decimal data types such as `DECIMAL` and `DOUBLE`.
+
+5. **scale**: Specifies the scale (number of digits after the decimal point) for decimal data types such as `DECIMAL` and `DOUBLE`.
+
+6. **values**: Specifies the set of allowed values for enumeration (`ENUM`) and set (`SET`) data types.
+
+7. **DEFAULT CURRENT_TIMESTAMP**: Specifies the default value for a timestamp data type to be the current timestamp.
+
+8. **isnullable**: Specifies that the column can contain NULL values.
+
+9. **collation**: Specifies the collation for character data types, determining how the data is sorted and compared.
+
+10. **comment**: Adds a comment or description to the column.
+
+11. **unique**: Specifies that the values in the column must be unique across all rows in the table.
+
+12. **FOREIGN KEY (columnName) REFERENCES foreignTable(foreignColumn)**: Specifies a foreign key constraint for the column, referencing another table and column.
+13. primery()
+
+
+Here are the static methods provided by the `Blueprint` class and their functionalities:
+
+you can use liek 
+
+    action() { 
+        DB.Alter.addColumn("youtablename","newcal","char(100)")
+        DB.Alter.drop("youtablename")
+    }
+
+1. **drop(name)**: Calls the `drop` method of the `Blueprint` class to drop a specified table.
+
+2. **dropIfExists(name)**: Calls the `dropIfExists` method of the `Blueprint` class to drop a specified table if it exists.
+
+3. **alter(alterTableBP)**: Creates a new instance of `Blueprint` and executes the provided `alterTableBP` function, allowing alterations to a table's structure.
+
+4. **Alter**: Defines a nested class for performing various alterations to a table's structure:
+   - **addColumn(tableName, new_column, datatype)**: Calls the `alterAddColumn` method of the `Blueprint` class to add a new column to a table.
+   - **renameColumn(tableName, old_column, new_column)**: Calls the `alterRenameColumn` method of the `Blueprint` class to rename a column in a table.
+   - **addConstraint(tableName, old_column, new_column)**: Calls the `alterAddConstraint` method of the `Blueprint` class to add a constraint to a column in a table.
+   - **modifyColumn(tableName, constraint, column_name)**: Calls the `alterModifyColumn` method of the `Blueprint` class to modify a column in a table.
+
+5. **dropTable(name)**: Calls the `dropTable` method of the `Blueprint` class to drop a specified table.
+
+6. **createIndex(a, b, c)**: Calls the `createIndex` method of the `Blueprint` class to create an index on a table.
+
+7. **dropTableIfExists(name)**: Calls the `dropIfExists` method of the `Blueprint` class to drop a specified table if it exists.
+
+8. **dropIndex(indexname, tablename)**: Calls the `dropIndex` method of the `Blueprint` class to drop an index from a table.
+

@@ -1,0 +1,387 @@
+#mainDiv{
+    background-color: #000221;
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+nav {
+     background-color: #000221;
+     color: #fff;
+     padding: 10px;
+ }
+
+ ul {
+     list-style-type: none;
+     margin: 0;
+     margin-top: 10px;
+     margin-bottom: 10px;
+     text-align: center;
+     padding: 0;
+ }
+
+ li {
+     display: inline;
+     margin-right: 20px;
+ }
+
+ a {
+     color: #fff;
+     font-size: large;
+     font: SF Pro Display;
+     text-decoration: none;
+ }
+
+
+ #banner {
+     width: 100%;
+     height: 90vh;
+     object-fit: cover;
+     object-position: center;
+     margin-bottom: 10px;
+ }
+
+ #bannerText {
+     position: absolute;
+     top: 35%;
+     left: 10%;
+     color: white;
+     width: 40%;
+     display: flex;
+     font-size: 45px;
+     text-align: start;
+     flex-direction: column;
+ }
+
+ #bannerGirl {
+     width: auto;
+     height: 100vh;
+     position: absolute;
+     right: 5%;
+     top: 15%;
+ }
+
+ .contactUS {
+     width: 150px;
+     height: 40px;
+     border-radius: 55px;
+     cursor: pointer;
+     margin-top: 60px;
+     border: none;
+ }
+
+
+ a:hover {
+     text-decoration: underline;
+ }
+
+
+ /* frequently asked questions  */
+.blogMain{
+    margin-top: 35px;
+    margin-left: 100px;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+.qTag{
+    color: #38B6FF;
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 0px;
+}
+
+.qheadding{
+    color: #FFFFFF;
+    width: 40%;
+    margin-top: 0;
+    height: auto;
+    display: flex;
+    margin-top: 8px;
+    font-size: 6vb;
+
+}
+.qdiscription{
+    color: #B6B8CE;
+    width: 85%;
+    margin-top: 0;
+    height: auto;
+    display: flex;
+    margin-top: 10pxd;
+    font-size: 2.5vb;
+
+}
+ /* frequently asked questions end  */
+
+/* start portion  */
+#frameHomePage{
+    position: relative;
+    max-width: 80%;
+    max-height: 70%;
+    z-index: 1;
+    display: block;
+    margin-bottom: 50px;
+
+}
+#ContainerframeHomePage{
+    position: relative;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    z-index: 1;
+}
+.startPortion {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -70%);
+    display: flex;
+    flex-direction: column;
+    z-index: 2;
+    color: white; 
+    text-align: center; 
+    margin-bottom: 50px;
+    padding: 20px; 
+}
+
+#H1ofStartPortion {
+    font-size: 2em; 
+    margin-bottom: 10px; 
+    color: #F2F3FF;
+    margin-bottom: 50px;
+
+}
+
+#disOfStartPortion {
+    font-size: 1.2em;
+    color: #FFFFFF;
+    margin-bottom: 20px; 
+}
+
+#StartButton {
+    width: 40vb; 
+    height: auto;
+    padding: 10px;
+    font-size: 10px;
+    font-style: bold;
+    background-color: #FFFFFF; 
+    color: #0B66A0; 
+    font-size: medium;
+    text-align: center;
+    margin: auto;
+    border: none; 
+    border-radius: 50px;
+    cursor: pointer; 
+}
+#StartButton:hover {
+    background-color: #0056b3; 
+    color: white; 
+
+}
+
+/* start portion end  */
+
+/* says about us  */
+
+.saysAboutUSContainer {
+    position: relative;
+  }
+  
+  .saysAboutUSImage {
+    width: 100%;
+    height: 90vh;
+
+  }
+  
+  .saysAboutUsPostion {
+    position: absolute;
+    top: 8%;
+    left: 8%;
+    text-align: start;
+    color: white;
+    z-index: 1; /* Ensure this div is above the image */
+  }
+.TESTIMONIALSP{
+ color: #38B6FF;
+}
+.whatSaysAboutUs{
+    color: #FFFFFF;
+    display: flex;
+    max-width: 80%;
+    font-size: 5vb;
+}
+.tcardcontainer{
+   position:  absolute;
+   top: 40%;
+   left: 0%;
+   width: 100%;
+   height: auto;
+   justify-content: center;
+   display: flex;
+   flex-direction: row;
+   overflow-x: auto; /* Enable horizontal scrolling */
+   overflow-y: hidden; /* Hide vertical scrollbar */
+   -ms-overflow-style: none; /* Hide scrollbar for IE & Edge */
+   scrollbar-width: none; /* Hide scrollbar for Firefox */
+}
+.scroll-left,
+.scroll-right {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(255, 255, 255, 0.5);
+  border: none;
+  font-size: 24px;
+  color: black;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.scroll-left {
+  left: 10px; /* Adjust as needed */
+}
+
+.scroll-right {
+  right: 10px; /* Adjust as needed */
+}
+
+
+.tcardcontainer::-webkit-scrollbar {
+    display: none; /* Hide scrollbar for Chrome, Safari, and Opera */
+  }
+  
+.Tcard{
+   border-radius: 10px;
+   min-width: 250px;
+   width: 250%;
+   height: 250px;
+   margin: 20px;
+   background-color: #fff; 
+}
+.Tcomments{
+    display: flex;
+    top: 10%;
+    margin: 10%;
+}
+.Tname {
+    display: flex;
+    justify-content: start;
+    margin-bottom: 28%;
+    margin-left: 10%;
+    color: #000000;
+    font-weight: bold;
+}
+/* what says about us end/ */
+#mapView{
+    border-radius: 30px;
+    margin: 30px;
+}
+#iframeContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* mobile  */
+
+ @media (max-width: 768px) {
+     #banner {
+         width: 100%;
+         height: auto;
+         object-fit: cover;
+         object-position: center;
+         font-size: 10vh;
+         margin-bottom: 10px;
+     }
+
+     #bannerGirl {
+         width: 0px;
+         height: 0px;
+     }
+
+     #bannerText {
+         position: absolute;
+         top: 13%;
+         color: white;
+         width: 80%;
+         display: flex;
+         font-size: 25px;
+         text-align: start;
+         flex-direction: column;
+     }
+     .contactUS {
+        width: 150px;
+        height: 40px;
+        border-radius: 55px;
+        cursor: pointer;
+        margin-top: 20px;
+        border: none;
+    }
+ /* frequently asked questions  */
+.blogMain{
+    margin-top: 35px;
+    margin-left: 50px;
+    font-size: 15px;
+    margin-bottom: 50px;
+}
+.qTag{
+    color: #38B6FF;
+    width: 100%;
+    height: auto;
+    display: flex;
+    margin: 0px;
+}
+
+.qheadding{
+    color: #FFFFFF;
+    width: 100%;
+    margin-top: 0;
+    height: auto;
+    display: flex;
+    margin-top: 8px;
+    font-size: 5vb;
+}
+.qdiscription{
+    color: #B6B8CE;
+    width: 85%;
+    margin-top: 0;
+    height: auto;
+    display: flex;
+    margin-top: 10pxd;
+    font-size: 2vb;
+}
+
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: white;
+    font-size: 16px;
+    margin-right: 16px;
+    border: none;
+  }
+  
+  .dropdown {
+    position: relative;
+    display: inline-block;
+  }
+  
+  .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+  }
+  
+  .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+  }
+  
+  .dropdown-content a:hover {background-color: #ddd;}
+  
+  .dropdown:hover .dropdown-content {display: block;}
+  
